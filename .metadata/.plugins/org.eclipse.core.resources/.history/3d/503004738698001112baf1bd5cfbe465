@@ -1,0 +1,20 @@
+package map;
+
+import java.util.*;
+public class KeyAlreadyExist {
+
+	public static void main(String[] args) {
+		// Write a Java program to insert a key-value pair into a HashMap and then update the value if the key already exists.
+		HashMap<String , Integer> map = new HashMap<>();
+		map.put("Anubhav", null);
+		map.put("Amit", 1);
+		map.put("Ankit", 2);
+		map.put("Anubhav", 7);
+		
+		for(Map.Entry<String , Integer > m : map.entrySet()) {
+			System.out.println(m.getKey() + " :"+m.getValue());
+		}
+
+	}
+
+}
