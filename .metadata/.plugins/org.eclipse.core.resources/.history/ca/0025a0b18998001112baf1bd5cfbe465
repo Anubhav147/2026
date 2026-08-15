@@ -1,0 +1,11 @@
+package map;
+
+public class Remove {
+
+	public static void main(String[] args) {
+		// Write a Java program to create a HashMap, add key-value pairs, and then remove a key only if it is mapped to a specific value.
+
+
+	}
+
+}

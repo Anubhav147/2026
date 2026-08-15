@@ -1,0 +1,51 @@
+package map;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class GetSizeThenIterate {
+
+	public static void main(String[] args) {
+		// Write a Java program to create a method that returns the size of a map and
+		// then verifies it by iterating over the map entries.
+
+		HashMap<String, String> s = new HashMap<>();
+		s.put("Anubhav", "Raj");
+		s.put("Srijan", "Sah");
+		
+//		int a= getSize(s);
+//		System.out.println("Size is : "+ a);
+//		
+//		if(a ==s.size()) {
+//			Iterable<Entry<String, String>> d =s.entrySet();
+//			System.out.println("Iterable hoo mai : " + d);
+//		}else {
+//			System.out.println("Size not Same");
+//		}
+
+		// 1. Get the size using the method
+		int expectedSize = getSize(s);
+		System.out.println("Size from method is: " + expectedSize);
+
+		// 2. Verify by iterating over the map entries
+		int actualIterationCount = 0;
+		for (Entry<String, String> entry : s.entrySet()) {
+			actualIterationCount++;
+			System.out.println("Processing item: " + entry.getKey() + " -> " + entry.getValue());
+		}
+
+		// 3. Final verification check
+		if (expectedSize == actualIterationCount) {
+			System.out.println("\nVerification Success! Iterated count matches the reported size.");
+		} else {
+			System.out.println("\nVerification Failed! Size mismatch detected.");
+		}
+
+	}
+
+	public static int getSize(Map<String, String> m) {
+		return m.size();
+	}
+
+}

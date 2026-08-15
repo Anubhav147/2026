@@ -1,0 +1,31 @@
+package map;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+public class CopyMapInEmptyMap {
+
+	public static void main(String[] args) {
+		// Write a Java program to copy all entries from one HashMap to another using
+		// putAll() and then verify both maps are equal.
+		Map<String, Integer> s1 = new HashMap<>();
+		s1.put("Anubhav", 1);
+		s1.put("vaibhav", 2);
+		s1.put("Amit", 3);
+		s1.put("Ankit", 4);
+		s1.put("Niraj", 5);
+
+		Map<String, Integer> s2 = new LinkedHashMap<>();
+
+		s2.putAll(s1);
+
+		
+		if (s1.equals(s2)) {
+			System.out.println("Both are equal");
+		} else {
+			System.out.println("Not Equal");
+		}
+	}
+
+}
